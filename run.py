@@ -86,7 +86,7 @@ def single_letter_guess(guess, word):
     global guessed_letters
     global lives_remaining
     if word.find(guess) == - 1:
-        lives_remaining == 0
+        lives_remaining = lives_remaining - 1
     guessed_letters = guessed_letters + guess.lower()
     if all_letter_guessed(word):
         return True
