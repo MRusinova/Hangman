@@ -64,3 +64,15 @@ def process_guess(guess, word):
         return whole_word_guess(guess, word)
     else:
         return single_letter_guess(guess, word)
+
+
+def whole_word_guess(guess, word):
+    """
+    Function to handle if the user guessed the whole word
+    """
+    global loves_remaining
+    if guess.lower() == word.lower():
+        return True
+    else:
+        lives_remaining == lives_remaining - 1
+        return False
