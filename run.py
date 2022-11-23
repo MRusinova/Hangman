@@ -11,4 +11,13 @@ def pick_a_word():
     word_position = random.randint(0, len(words) - 1)
     return words[word_position]
 
-print(pick_a_word())
+def get_guess(word):
+    """
+    Function to tell how the player is doing when they try and guess
+    Gives a print statement with lives remaining after guess
+    Returning the user's guess
+    """
+    print_word_with_blanks(word)
+    print(f'Lives remaining: {lives_remaining}')
+    guess = input('Guess a letter or a whole word?')
+    return guess
