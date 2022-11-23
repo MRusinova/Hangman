@@ -70,7 +70,7 @@ def whole_word_guess(guess, word):
     """
     Function to handle if the user guessed the whole word
     """
-    global loves_remaining
+    global lives_remaining
     if guess.lower() == word.lower():
         return True
     else:
