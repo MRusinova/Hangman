@@ -11,6 +11,24 @@ def pick_a_word():
     word_position = random.randint(0, len(words) - 1)
     return words[word_position]
 
+
+def play():
+    """
+    Playing the game function
+    """
+    word = pick_a_word()
+    while True:
+        guess = get_guess(word)
+        if process_guess(guess, word):
+            print('You win! Well Done!')
+            break
+        if lives_remaining == 0:
+            print('You are Hung!')
+            print('The Word was: ' + word)
+            break
+
+
+
 def print_word_with_blanks(word):
     """
     Compares the letter the player entered with every letter of the randomly selected word.
