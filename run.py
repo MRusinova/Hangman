@@ -36,3 +36,13 @@ def get_guess(word):
     print(f'Lives remaining: {lives_remaining}')
     guess = input('Guess a letter or a whole word?')
     return guess
+
+
+def process_guess(guess, word):
+    """
+    To determine what to do in either case if the user enters whe whole word or a single letter.
+    """
+    if len(guess) > 1 and len(guess) == len(word):
+        return whole_word_guess(guess, word)
+    else:
+        return single_letter_guess(guess, word)
