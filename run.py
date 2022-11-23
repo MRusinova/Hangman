@@ -73,7 +73,7 @@ def whole_word_guess(guess, word):
     """
     global lives_remaining
     if guess.lower() == word.lower():
-        return True
+        return word
     else:
         lives_remaining == lives_remaining - 1
         return False
