@@ -4,6 +4,7 @@ words = ['chicken', 'dog', 'pasta', 'tomatoe', 'radio']
 lives_remaining = 7
 guessed_letters = ''
 
+
 def pick_a_word():
     """
     Function to generate a random word from our list of strings
@@ -28,10 +29,9 @@ def play():
             break
 
 
-
 def print_word_with_blanks(word):
     """
-    Compares the letter the player entered with every letter of the randomly selected word.
+    Compares the letter the player entered with every letter ofselected word.
     Displays if any of the guessed letters are in the generated word.
     """
     display_word = ''
@@ -44,6 +44,7 @@ def print_word_with_blanks(word):
     
     print(display_word)
 
+
 def get_guess(word):
     """
     Function to tell how the player is doing when they try and guess
@@ -51,7 +52,7 @@ def get_guess(word):
     Returning the user's guess
     """
     print_word_with_blanks(word)
-    print(f'Lives remaining: {lives_remaining}')
+    print('Lives remaining: ' + str(lives_remaining))
     guess = input('Guess a letter or a whole word?')
     return guess
 
@@ -76,3 +77,26 @@ def whole_word_guess(guess, word):
     else:
         lives_remaining == lives_remaining - 1
         return False
+
+
+def single_letter_guess(guess, word):
+    """
+    
+    """
+    global guessed_letters
+    global lives_remaining
+    if word.find(guess) == - 1:
+        lives_remaining == 0
+    guessed_letters = guessed_letters + guess.lower()
+    if all_letter_guessed(word):
+        return True
+    return False
+
+
+def all_letter_guessed(word):
+    for letter in word:
+        if guessed_letters.find(letter.lower()) == -1:
+            return False
+        return True
+
+play()
