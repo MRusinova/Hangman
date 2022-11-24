@@ -23,10 +23,22 @@ def play():
         if process_guess(guess, word):
             print('You win! Well Done!')
             break
-        if lives_remaining == 0:
+        if lives_remaining < 1:
             print('You are Hung!')
             print('The Word was: ' + word)
             break
+
+
+def get_guess(word):
+    """
+    Function to tell how the player is doing when they try and guess
+    Gives a print statement with lives remaining after guess
+    Returning the user's guess
+    """
+    print_word_with_blanks(word)
+    print('Lives remaining: ' + str(lives_remaining))
+    guess = input('Guess a letter or a whole word?')
+    return guess
 
 
 def print_word_with_blanks(word):
@@ -43,18 +55,6 @@ def print_word_with_blanks(word):
             display_word = display_word + '-'
     
     print(display_word)
-
-
-def get_guess(word):
-    """
-    Function to tell how the player is doing when they try and guess
-    Gives a print statement with lives remaining after guess
-    Returning the user's guess
-    """
-    print_word_with_blanks(word)
-    print('Lives remaining: ' + str(lives_remaining))
-    guess = input('Guess a letter or a whole word?')
-    return guess
 
 
 def process_guess(guess, word):
