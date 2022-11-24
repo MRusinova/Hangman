@@ -97,6 +97,6 @@ def all_letter_guessed(word):
     for letter in word:
         if guessed_letters.find(letter.lower()) == -1:
             return False
-        return True
+    return True
 
 play()
