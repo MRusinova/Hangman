@@ -41,11 +41,15 @@ def get_guess(word):
             guess = input('Guess a letter or a whole word?')
             if guess.isalpha():
                 print('Lives remaining: ' + str(lives_remaining))
+                return guess
             else:
+                lives_remaining - 1
                 print('You must enter a letter or a word!')
+                print('Lives remaining: ' + str(lives_remaining))
         return guess
     except Exception as e:
         print(e)
+        #get_guess(word)
     #print_word_with_blanks(word)
     #print('Lives remaining: ' + str(lives_remaining))
     #guess = input('Guess a letter or a whole word?')
