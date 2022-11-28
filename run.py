@@ -36,9 +36,22 @@ def get_guess(word):
     Returning the user's guess
     """
     print_word_with_blanks(word)
-    print('Lives remaining: ' + str(lives_remaining))
-    guess = input('Guess a letter or a whole word?')
-    return guess
+    try:
+        while True:
+            guess = input('Guess a letter or a whole word?')
+            if guess.isalpha():
+                print('Lives remaining: ' + str(lives_remaining))
+            else:
+                print('You must enter a letter or a word!')
+        return guess
+    except Exception as e:
+        print(e)
+    #print_word_with_blanks(word)
+    #print('Lives remaining: ' + str(lives_remaining))
+    #guess = input('Guess a letter or a whole word?')
+    #return guess
+    
+
 
 
 def print_word_with_blanks(word):
@@ -91,12 +104,13 @@ def single_letter_guess(guess, word):
     if all_letter_guessed(word):
         return True
     return False
-
+        
 
 def all_letter_guessed(word):
     for letter in word:
         if guessed_letters.find(letter.lower()) == -1:
             return False
     return True
+
 
 play()
