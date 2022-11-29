@@ -47,18 +47,32 @@ def get_guess(word):
     """
     print_word_with_blanks(word)
     global lives_remaining
-    try:
-        while True:
+    while True:
+        try:
             guess = input('Guess a letter or a whole word?\n')
             if guess.isalpha():
                 return guess
-            else:
-                lives_remaining = lives_remaining - 1
-                print('You must enter a letter or a word!')
+        except:
+            lives_remaining = lives_remaining - 1
+            print('You must enter a letter or a word!')
+            continue
+        else:
+            return guess
+        break
+
+
+
+    #try:
+     #   guess = input('Guess a letter or a whole word?\n')
+      #  if guess.isalpha():
+       #     return guess
+        #else:
+         #   lives_remaining = lives_remaining - 1
+          #  print('You must enter a letter or a word!')
                 
-                return guess
-    except Exception as e:
-        print(e)
+           # return guess
+    #except Exception as e:
+     #   print(e)
         
 
 
