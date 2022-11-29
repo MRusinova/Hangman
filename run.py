@@ -26,7 +26,9 @@ def play():
     """
     welcome()
     word = pick_a_word()
+    
     while True:
+        print('Lives remaining: ' + str(lives_remaining))
         guess = get_guess(word)
         if process_guess(guess, word):
             print('You win! Well Done!')
@@ -44,16 +46,16 @@ def get_guess(word):
     Returning the user's guess
     """
     print_word_with_blanks(word)
+    global lives_remaining
     try:
         while True:
             guess = input('Guess a letter or a whole word?\n')
             if guess.isalpha():
-                print('Lives remaining: ' + str(lives_remaining))
                 return guess
             else:
-                lives_remaining - 1
+                lives_remaining = lives_remaining - 1
                 print('You must enter a letter or a word!')
-                print('Lives remaining: ' + str(lives_remaining))
+                
                 return guess
     except Exception as e:
         print(e)
@@ -106,7 +108,7 @@ def single_letter_guess(guess, word):
     global guessed_letters
     global lives_remaining
     if word.find(guess) == - 1:
-        lives_remaining -= 1
+        lives_remaining = lives_remaining - 1
     guessed_letters = guessed_letters + guess.lower()
     if all_letter_guessed(word):
         return True
