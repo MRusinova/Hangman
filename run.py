@@ -46,7 +46,7 @@ def get_guess(word):
                 lives_remaining - 1
                 print('You must enter a letter or a word!')
                 print('Lives remaining: ' + str(lives_remaining))
-        return guess
+                return guess
     except Exception as e:
         print(e)
         #get_guess(word)
@@ -82,6 +82,7 @@ def process_guess(guess, word):
         return whole_word_guess(guess, word)
     else:
         return single_letter_guess(guess, word)
+    
 
 
 def whole_word_guess(guess, word):
