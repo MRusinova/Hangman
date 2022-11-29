@@ -13,10 +13,15 @@ def pick_a_word():
     return words[word_position]
 
 
+def welcome():
+    print('Hello and Welcome to Hangman Game!')
+
+
 def play():
     """
     Playing the game function
     """
+    welcome()
     word = pick_a_word()
     while True:
         guess = get_guess(word)
