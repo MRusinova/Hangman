@@ -14,6 +14,9 @@ def pick_a_word():
 
 
 def welcome():
+    """
+    Function to welcome the user to our Hangman Game
+    """
     print('Hello and Welcome to Hangman Game!')
 
 
@@ -43,7 +46,7 @@ def get_guess(word):
     print_word_with_blanks(word)
     try:
         while True:
-            guess = input('Guess a letter or a whole word?')
+            guess = input('Guess a letter or a whole word?\n')
             if guess.isalpha():
                 print('Lives remaining: ' + str(lives_remaining))
                 return guess
@@ -54,13 +57,7 @@ def get_guess(word):
                 return guess
     except Exception as e:
         print(e)
-        #get_guess(word)
-    #print_word_with_blanks(word)
-    #print('Lives remaining: ' + str(lives_remaining))
-    #guess = input('Guess a letter or a whole word?')
-    #return guess
-    
-
+        
 
 
 def print_word_with_blanks(word):
