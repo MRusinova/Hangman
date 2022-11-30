@@ -31,13 +31,14 @@ def play_again():
     else:
         print('Hope you had fun playing. See you again!')
 
+
 def play():
     """
     Playing the game function
     """
     welcome()
     word = pick_a_word()
-    
+
     while True:
         print('Lives remaining: ' + str(lives_remaining))
         guess = get_guess(word)
@@ -49,10 +50,6 @@ def play():
             print('The Word was: ' + word)
             break
 
-
-
-
-       
 
 def get_guess(word):
     """
@@ -69,10 +66,9 @@ def get_guess(word):
                 return guess
         except:
             lives_remaining = lives_remaining - 1
-            
             continue
         else:
-            print('Invalid input! Please enter a letter or a whole word.')
+            print('Invalid input!')
             return guess
         break
 
@@ -85,7 +81,7 @@ def print_word_with_blanks(word):
     display_word = ''
 
     for letter in word:
-        if guessed_letters.find(letter) > -1:
+        if guessed_letters.find(letter) > - 1:
             display_word = display_word + letter
         else:
             display_word = display_word + '-'
@@ -95,7 +91,7 @@ def print_word_with_blanks(word):
 
 def process_guess(guess, word):
     """
-    To determine what to do in either case if the user enters whe whole word or a single letter.
+    To decide what to do if the user enters whe whole word or a single letter.
     """
     if len(guess) > 1 and len(guess) == len(word):
         return whole_word_guess(guess, word)
@@ -118,7 +114,7 @@ def whole_word_guess(guess, word):
 
 def single_letter_guess(guess, word):
     """
-    
+    Function to handle a single letter input
     """
     global guessed_letters
     global lives_remaining
@@ -128,13 +124,15 @@ def single_letter_guess(guess, word):
     if all_letter_guessed(word):
         return True
     return False
-        
 
+    
 def all_letter_guessed(word):
     for letter in word:
-        if guessed_letters.find(letter.lower()) == -1:
+        if guessed_letters.find(letter.lower()) == - 1:
             return False
     return True
 
 
-play()    
+ 
+play()  
+ 
