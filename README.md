@@ -25,9 +25,14 @@ Random word generation
     <br>
     <li> The computer generates random word from a list provided in the code
     <li> The user sees the word displayed as dashes ('-') with the correct amount of letters but no letters visible
+</ul>  <img src="README images/Start.png" alt="">
+<ul>
     <li> Accepts user input and displays the user's guess
     <li> Prints the user's guess and if its correct it replaces one of the dashes with the correct letter in the correct position
+</ul>  <img src="README images/Correct.png" alt="">
     <li> Prints a different message depending on if the player's input is correct
+</ul>  <img src="README images/You win + correct guess.png" alt="">
+</ul>  <img src="README images/Invalid input + Hung.png" alt="">
     <li> If the guess is incorrect one live out of seven is taken from the user
     <li> Displays a message with number of lives left
     <hr>
@@ -36,3 +41,4 @@ Random word generation
     <br>
     <li> If the user enters an incorrect value such as symbol, number or a space a message displays "Invalid input! Please enter a letter or a whole word."
     <li> If an invalid input has been entered the player looses a live
+</ul>  <img src="README images/Invalid input.png" alt="">
