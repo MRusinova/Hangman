@@ -44,6 +44,7 @@ def play():
         guess = get_guess(word)
         if process_guess(guess, word):
             print('You win! Well Done!')
+            print('The word is ' + word)
             break
         if lives_remaining < 1:
             print('You are Hung!')
