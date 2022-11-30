@@ -20,6 +20,17 @@ def welcome():
     print('Hello and Welcome to Hangman Game!')
 
 
+def play_again():
+    """
+    Function that asks the user if they want to play again.
+    """
+    response = input("Would you like to play again? Enter 'Y' for yes and 'N' for No").lower()
+
+    if response == 'y':
+        play()
+    else:
+        print('Hope you had fun playing. See you again!')
+
 def play():
     """
     Playing the game function
@@ -39,6 +50,10 @@ def play():
             break
 
 
+
+
+       
+
 def get_guess(word):
     """
     Function to tell how the player is doing when they try and guess
@@ -54,26 +69,12 @@ def get_guess(word):
                 return guess
         except:
             lives_remaining = lives_remaining - 1
-            print('You must enter a letter or a word!')
+            
             continue
         else:
+            print('Invalid input! Please try again.')
             return guess
         break
-
-
-
-    #try:
-     #   guess = input('Guess a letter or a whole word?\n')
-      #  if guess.isalpha():
-       #     return guess
-        #else:
-         #   lives_remaining = lives_remaining - 1
-          #  print('You must enter a letter or a word!')
-                
-           # return guess
-    #except Exception as e:
-     #   print(e)
-        
 
 
 def print_word_with_blanks(word):
@@ -136,4 +137,4 @@ def all_letter_guessed(word):
     return True
 
 
-play()
+play()    
