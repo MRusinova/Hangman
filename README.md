@@ -42,3 +42,8 @@ Random word generation
     <li> If the user enters an incorrect value such as symbol, number or a space a message displays "Invalid input! Please enter a letter or a whole word."
     <li> If an invalid input has been entered the player looses a live
 </ul>  <img src="README images/Invalid input.png" alt="">
+
+## Testing
+<hr>
+<li> I have manually tested the code in PEP8 and there were few minor indentation problems that did not affect the functionallity of the code but have been fixed
+<li> Given invalid inputs: empty spaces, symbols and numbers both in GitPod and the Heroku mock terminal
