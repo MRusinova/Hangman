@@ -35,3 +35,4 @@ Random word generation
     <ul>
     <br>
     <li> If the user enters an incorrect value such as symbol, number or a space a message displays "Invalid input! Please enter a letter or a whole word."
+    <li> If an invalid input has been entered the player looses a live
