@@ -72,7 +72,7 @@ def get_guess(word):
             
             continue
         else:
-            print('Invalid input! Please try again.')
+            print('Invalid input! Please enter a letter or a whole word.')
             return guess
         break
 
