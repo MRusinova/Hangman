@@ -65,6 +65,8 @@ def get_guess(word):
             guess = input('Guess a letter or a whole word?\n')
             if guess.isalpha():
                 return guess
+            if guess in guessed_letters:
+                print('You already guessed ', guessed_letters)
             raise ValueError('Invalid input')
         except:
             print('Invalid input!')
