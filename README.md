@@ -8,7 +8,7 @@ The computer generates a random word from a given list in the code and the game 
 Here is my Hangman project https://hangman-ga.herokuapp.com/ 
 
 
-<img src="README images/Screenshot (103).png" alt="">
+<img src="README images/Screenshot (109).png" alt="">
 
 ## How to play
 <hr>
