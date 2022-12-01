@@ -1,0 +1,1 @@
+words_list = ['chicken', 'dog', 'pasta', 'tomatoe', 'radio']
