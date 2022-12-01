@@ -17,7 +17,18 @@ def welcome():
     """
     Function to welcome the user to our Hangman Game
     """
-    print('Hello and Welcome to Hangman Game!')
+    print('|    ********** H A N G M A N **********      |')
+    print('|          Welcome to Hangman game!           |')
+    print('|         **********RULES***********          |')
+    print('|                                             |')
+    print('| 1. Enter a letter or a whole word           |')
+    print('| 2. Press "Enter" to submit                  |')
+    print('| 3. You have 7 lives                         |')
+    print('| 4. For every wrong entry you loose one life |')
+    print('| 5. You dont loose lives for wrong input     |')
+    print('|    (number, symbol or space)                |')
+    print('|_____________________________________________|')
+
 
 
 def play_again():
@@ -66,7 +77,7 @@ def get_guess(word):
             if guess.isalpha():
                 return guess
             if guess in guessed_letters:
-                print('You already guessed ', guessed_letters)
+                print('This letter has been guessed')
             raise ValueError('Invalid input')
         except:
             print('Invalid input!')
