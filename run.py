@@ -68,11 +68,8 @@ def get_guess(word):
             raise ValueError('Invalid input')
         except:
             print('Invalid input!')
-            continue
         else:
-            
             return guess
-        break
 
 
 def print_word_with_blanks(word):
