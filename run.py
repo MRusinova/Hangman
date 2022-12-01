@@ -65,11 +65,12 @@ def get_guess(word):
             guess = input('Guess a letter or a whole word?\n')
             if guess.isalpha():
                 return guess
+            raise ValueError('Invalid input')
         except:
-            lives_remaining = lives_remaining - 1
+            print('Invalid input!')
             continue
         else:
-            print('Invalid input!')
+            
             return guess
         break
 
