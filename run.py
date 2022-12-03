@@ -14,6 +14,13 @@ def pick_a_word():
     return words_list[word_position]
 
 
+def reset_game():
+    lives_remaining = 7
+    guessed_letters = ''
+    display_word = ''
+    word = ''
+
+
 def welcome():
     """
     Function to welcome the user to our Hangman Game
@@ -49,18 +56,20 @@ def play():
     Playing the game function
     """
     welcome()
+    global word
     word = pick_a_word()
-
     while True:
         print('Lives remaining: ' + str(lives_remaining))
         guess = get_guess(word)
         if process_guess(guess, word):
             print('You win! Well Done!')
             print('The word is ' + word)
+            reset_game()
             break
         if lives_remaining < 1:
             print('You are Hung!')
             print('The Word was: ' + word)
+            reset_game()
             break
 
 
