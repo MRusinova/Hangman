@@ -70,3 +70,15 @@ Which does not affect the functionallity of the code
 ## Validator testing
 <li>PEP8
 No significant errors found only the ones stated above in unfixed bugs
+
+## Deployment
+ <li> Steps for deployment
+ <li> Create a new Heroku app
+ <li> Set the buildbacks to Python and NodeJS in that order
+ <li> Link the Heroku app to the repository
+ <li> Click on Deploy
+ 
+ <li> Clone the repository 
+ <li> Open the code tab in my repository
+ <li> Copy the link from HTTPS tab
+ <li>Open git Bash and type git clone and add the link
