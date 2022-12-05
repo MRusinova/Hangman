@@ -14,13 +14,6 @@ def pick_a_word():
     return words_list[word_position]
 
 
-def reset_game():
-    lives_remaining = 7
-    guessed_letters = ''
-    display_word = ''
-    word = ''
-
-
 def welcome():
     """
     Function to welcome the user to our Hangman Game
@@ -38,25 +31,11 @@ def welcome():
     print('|_____________________________________________|')
 
 
-
-def play_again():
-    """
-    Function that asks the user if they want to play again.
-    """
-    response = input("Would you like to play again? Enter 'Y' for yes and 'N' for No").lower()
-
-    if response == 'y':
-        play()
-    else:
-        print('Hope you had fun playing. See you again!')
-
-
 def play():
     """
     Playing the game function
     """
     welcome()
-    global word
     word = pick_a_word()
     while True:
         print('Lives remaining: ' + str(lives_remaining))
@@ -64,12 +43,10 @@ def play():
         if process_guess(guess, word):
             print('You win! Well Done!')
             print('The word is ' + word)
-            reset_game()
             break
         if lives_remaining < 1:
             print('You are Hung!')
             print('The Word was: ' + word)
-            reset_game()
             break
 
 
@@ -101,7 +78,6 @@ def print_word_with_blanks(word):
     Displays if any of the guessed letters are in the generated word.
     """
     display_word = ''
-
     for letter in word:
         if guessed_letters.find(letter) > - 1:
             display_word = display_word + letter
@@ -155,6 +131,5 @@ def all_letter_guessed(word):
     return True
 
 
- 
 play()  
  
