@@ -48,7 +48,21 @@ Random word generation
 <li> I have manually tested the code in PEP8 and there were few minor indentation problems that did not affect the functionallity of the code but have been fixed
 <li> Given invalid inputs: empty spaces, symbols and numbers both in GitPod and the Heroku mock terminal
 
+## Data Model
+<hr>
+For my data model I have attached a link to a flowchart of my game
+
+[https://lucid.app/lucidspark/49bb29b7-fa45-4b02-b526-e96e61ca21eb/edit?viewport_loc=244%2C2147%2C3530%2C1630%2C0_0&invitationId=inv_cbfe13d4-a556-4448-b490-b43e9048acaa]
+
+
 ## Bugs
 <hr>
 Solved bugs
 <li> At first I was using a while loop for the invalid input. I wrote down the function on paper and then is when I actually realized I was using a loop so I changed it to an exception error handling following a simple structure of exception/error handling and just replacing it with the values and messages for my own game. Also at first my game was taking lives for invalid input but after showing the game to friends they said in a real life game I wouldn't be taking lives for invalid input Ill just remind the other player that they have to give me a letter or a word so I removed what I had at first lives_remaining = lives_remaining - 1 and I added the 'raise ValueError ('invalid input') to actually raise that error as thought by the course material in Code Institute.
+
+## Remaining bugs
+<li> After checking my code in PEP8 Syntax Checker there are few bugs that remain but do not affect the functionality of the code such as white space around operators. I feel like it looks better without the space around the dash:
+<img src="README images/White spaces around operators.png" alt="">
+and:
+<img src="README images/Indentation white spaces.png" alt="">
+Which does not affect the functionallity of the code

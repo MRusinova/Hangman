@@ -123,13 +123,12 @@ def single_letter_guess(guess, word):
         return True
     return False
 
-    
+  
 def all_letter_guessed(word):
     for letter in word:
         if guessed_letters.find(letter.lower()) == - 1:
             return False
     return True
-
 
 play()  
  
