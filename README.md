@@ -66,3 +66,7 @@ Solved bugs
 and:
 <img src="README images/Indentation white spaces.png" alt="">
 Which does not affect the functionallity of the code
+
+## Validator testing
+<li>PEP8
+No significant errors found only the ones stated above in unfixed bugs
