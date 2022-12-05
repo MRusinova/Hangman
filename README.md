@@ -82,3 +82,8 @@ No significant errors found only the ones stated above in unfixed bugs
  <li> Open the code tab in my repository
  <li> Copy the link from HTTPS tab
  <li>Open git Bash and type git clone and add the link
+
+ ## Credits
+ <li> For main structure used this tutorial: [https://biteresources.com/attachments/article/20/Hangman%20Guide.pdf]
+ <li> Code institute lessons
+ <li> WW3 Schools for checking syntax
